@@ -42,18 +42,52 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
         function tervita(){
             return "Tere päiksekesenene";	
         }
-
         echo tervita();
 
         echo "<h2>Liitu uudiskirjaga</h2>";
+
+        function uudiskiri(){
+            return '<form action="" method="post">
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Liitun!</button>
+        </form>';
+        }
+        echo uudiskiri();
+        echo "<br>";
+
+        ?>
+        <h2>Kasutajanimi ja email</h2>
+
+        <form action="" method="get">
+            <div class="mb-3">
+                <label class="form-label">Sisesta kasutajanimi</label>
+                <input type="text" class="form-control" name="kasutaja">
+            </div>
+            <button type="submit" class="btn btn-primary">Saada</button>
+        </form>  
+
+        <?php
+                            
+        function kasutaja($kasutajanimi){
+        $kasutajanimi = strtolower($kasutajanimi);
+        $email = "$kasutajanimi@hkhk.edu.ee";
+        $kood = substr(str_shuffle('abcdefghijklmnopqrstuvwxyz1234567890'), 0, 7);
+        return "Kasutajanimi: $kasutajanimi <br> Email: $email <br> Kood: $kood";
+        }
         
-
-
-
-
+        if(isset($_GET['kasutaja'])){
+        echo kasutaja($_GET['kasutaja']);
+        }
+        
+        echo '<br>';
 
 
         ?>
+
+
 
 
 
