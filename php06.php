@@ -61,15 +61,36 @@
         echo "<br>";
 
         echo "<h2>Kahanev</h2>";
-
-
+        $kahanev = 10;
+        while($kahanev >=1){
+            echo $kahanev.'<br>'; 
+            $kahanev--;	
+        }
+        
+        echo "<br>";
 
         echo "<h2>Kolmega jagunevad</h2>";
 
+        $number = 1;
+        do{
+            if($number % 3 == 0){
+                echo $number.' '; 
+            }
+            $number++;	
+        } while($number <=100);
 
+        echo "<br>";
 
         echo "<h2>Massiivid ja tsüklid 3</h2>";
+        $naised = array('Mario', 'Kaspar', 'Issi');
 
+        $mehed = array('Agata', 'emme', 'vanaema');
+
+        for($kogus=0; $kogus<count($naised); $kogus++){
+            echo $naised[$kogus].' - '.$mehed[$kogus].'<br>';
+        }
+
+        echo "<br>";
 
         ?>
     </div>
