@@ -11,20 +11,54 @@
         <h1>Ülesanne 6</h1>
         <?php
         echo "<h2>Genereeri</h2>";
+        $number = 1;
+        do{
+            echo $number.' '; 
+            $number++;	
+        } while($number <=100);
 
+        echo "<br>";
+        echo "<br>";
+        $arv = 1;
+        while($arv <=10){
+            echo $arv.'<br>'; 
+            $arv++;	
+        }
 
+        echo "<br>";
+
+        $arv1 = 1;
+        while($arv1 <=10){
+            echo "$arv1. "; 
+            $arv1++;	
+        }
+
+        echo "<br>";
+        echo "<br>";
 
         echo "<h2>Rida</h2>";
+        for($pikkus=1; $pikkus<=10; $pikkus++){ 
+            echo '*';
+        }
 
-
+        echo "<br>";
+        echo "<br>";
 
         echo "<h2>Rida !!</h2>";
+        for($pikkus=1; $pikkus<=10; $pikkus++){ 
+            echo '*<br>';
+        }
 
-
+        echo "<br>";
 
         echo "<h2>Ruut</h2>";
-
-
+        for($rida=1; $rida<=5; $rida++){ 
+            for($veerg=1; $veerg<=5; $veerg++){ 
+                    echo '* ';	
+                }
+            echo '<br>';
+        }
+        echo "<br>";
 
         echo "<h2>Kahanev</h2>";
 
