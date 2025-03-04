@@ -1,5 +1,3 @@
-<!-- AGATA BRETE JÕPISELG Koosta programm, mis lubab üles laadida ainult JPG ja JPEG faile
-Täienda sama programmi nii, et ma näeksin üleslaetud pildifaile ning neile klikkides kuvatakse pildid täies oma hiilguses  -->
 <!doctype html>
 <html lang="et">
     <head>
@@ -22,7 +20,7 @@ Täienda sama programmi nii, et ma näeksin üleslaetud pildifaile ning neile kl
                     $faili_tyyp = $_FILES['minu_fail']['type'];
 
                     if($faili_tyyp == 'image/jpeg' || $faili_tyyp == 'image/jpg'){
-                        $kataloog = '13_pildid';
+                        $kataloog = 'img';
                         if(move_uploaded_file($ajutine_fail, $kataloog.'/'.$sinu_faili_nimi)){
                             echo '<div class="alert alert-success">Faili üleslaadimine oli edukas</div>';
                         } else {
@@ -43,7 +41,7 @@ Täienda sama programmi nii, et ma näeksin üleslaetud pildifaile ning neile kl
                 <select name="pildid">
                     <option value="">Vali pilt</option>
                     <?php 
-                        $kataloog = '13_pildid';
+                        $kataloog = 'img';
                         $asukoht=opendir($kataloog);
                         while($rida = readdir($asukoht)){
                             if($rida!='.' && $rida!='..'){
@@ -58,7 +56,7 @@ Täienda sama programmi nii, et ma näeksin üleslaetud pildifaile ning neile kl
                 <?php
                 if(!empty($_POST['pildid'])){
                     $pilt = $_POST['pildid'];
-                    $pildi_aadress = '13_pildid/'.$pilt;
+                    $pildi_aadress = 'img/'.$pilt;
                     
 
 
