@@ -27,9 +27,9 @@ Loo adminni leht, kus admin saab postitusi lisada ja kustutada 4p -->
         margin-right: 0px;
       }
     </style>
-    <div class="container jumbo">
+    <div class="container-fluid jumbo">
       <nav class="navbar navbar-expand-lg bg-transparent">
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand text-light" href="#"> Agata Brete Jõpiselg</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon text-light"></span>
