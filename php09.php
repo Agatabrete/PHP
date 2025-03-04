@@ -69,7 +69,7 @@ Näiteks: sisend–>Ülle ja Doos; väljund–>ylle.doos@hkhk.edu.ee -->
 
                 <br>
 
-                <h2>Roppsõnad</h2>
+                <h2>Ropud sõnad</h2>
 
                 <form action="" method="get">
                     <div class="mb-3">
