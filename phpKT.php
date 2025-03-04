@@ -20,8 +20,11 @@ Loo adminni leht, kus admin saab postitusi lisada ja kustutada 4p -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
       .jumbo{
-        background-image: url(https://picsum.photos/1400/400);
-        background-size: cover;
+        background-image: url(https://picsum.photos/1600/800);
+        background-size: auto;
+        background-repeat: no-repeat;
+        margin-left: 0px;
+        margin-right: 0px;
       }
     </style>
     <div class="container jumbo">
