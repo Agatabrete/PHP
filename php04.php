@@ -72,15 +72,11 @@ kui pole punkte lisanud või lisas kogemata teksti tuleb kiri SISESTA OMA PUNKTI
                     echo '<div class="alert alert-primary" role="alert">
                     JUUBEL!
                  </div>';
-
                 }else{
                     echo '<div class="alert alert-primary" role="alert">
                      ei ole JUUBEL!
                   </div>';
-
                 }
-
-                
                 switch($arv1){ 
                 case ($arv1 >= 10): echo 'SUPER'; 
                 break; 
@@ -90,9 +86,7 @@ kui pole punkte lisanud või lisas kogemata teksti tuleb kiri SISESTA OMA PUNKTI
                 break;
                 default: echo 'Sisetsa punktid!'; 
                 } 
-
                 }
-
                 ?>
             </div>
             <div class="col-md-4"></div>

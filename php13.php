@@ -18,7 +18,6 @@
                     $sinu_faili_nimi = $_FILES['minu_fail']['name'];
                     $ajutine_fail = $_FILES['minu_fail']['tmp_name'];
                     $faili_tyyp = $_FILES['minu_fail']['type'];
-
                     if($faili_tyyp == 'image/jpeg' || $faili_tyyp == 'image/jpg'){
                         $kataloog = 'img';
                         if(move_uploaded_file($ajutine_fail, $kataloog.'/'.$sinu_faili_nimi)){
@@ -35,7 +34,6 @@
                     <input type="file" name="minu_fail" accept="image/jpeg, image/jpg"><br>
                     <input type="submit" value="Lae üles!">
                 </form>
-
                 <h2>Üleslaetud pildid</h2>
                 <form method="post" action="">
                 <select name="pildid">
@@ -47,9 +45,7 @@
                             if($rida!='.' && $rida!='..'){
                                 echo "<option value='$rida'>$rida</option>\n";
                             }
-                        }
-                    
-                        
+                        }    
                     ?>
                 </select>
                 <input type="submit" value="Vaata">
@@ -57,9 +53,6 @@
                 if(!empty($_POST['pildid'])){
                     $pilt = $_POST['pildid'];
                     $pildi_aadress = 'img/'.$pilt;
-                    
-
-
                     echo "<img width='800px' src='$pildi_aadress'><br>";
                 }
                 ?>

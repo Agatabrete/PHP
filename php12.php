@@ -12,28 +12,23 @@
         <h1>Harjutus 12</h1>
         <div class="row">
             <div class="col-md-4">
-
                 <h2>Sõiduaeg</h2>
-
                 <form action="" method="get">
                     <div class="mb-3">
-                        <label class="form-label">Sisesta oma nimi!</label>
+                        <label class="form-label">Sisesta oma nimi:</label>
                         <input type="text" class="form-control" name="kasutaja">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Sõidu alustus aeg: [hh:mm]</label>
+                        <label class="form-label">Sõidu alustus aeg: </label>
                         <input type="text" class="form-control" name="algus">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Sõidu lõpetamise aeg: [hh:mm]</label>
+                        <label class="form-label">Sõidu lõpetamise aeg: </label>
                         <input type="text" class="form-control" name="lopp">
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form> 
-
-
                 <?php
-
                 if (isset($_GET["kasutaja"]) && isset($_GET["algus"]) && isset($_GET["lopp"])) {
                     $kasutaja = $_GET["kasutaja"];
                     $algus = $_GET["algus"];
@@ -47,35 +42,24 @@
                     $minutid = $soiduaeg % 60;
                     echo "Tere, $kasutaja! Teie sõiduaeg on $tunnid tundi ja $minutid minutit.";
                 }
-
                 ?>
-
-
-
                 <h2>Palkade võrdlus</h2>
-
                 <?php
-
                 $allikas = 'csv/tootajad.csv';
-
                 $fail = fopen($allikas, 'r');
-
+                $naiste_arv = 0;
                 $meeste_palk = 0;
+                $naiste_max = 0;
                 $naiste_palk = 0;
                 $meeste_arv = 0;
-                $naiste_arv = 0;
                 $meeste_max = 0;
-                $naiste_max = 0;
-
                 while (($rida = fgetcsv($fail, 1000, ';')) !== false) {
                     if (count($rida) < 3) {
                         continue;
                     }
-                    
                     $nimi = trim($rida[0]);
                     $sugu = trim($rida[1]);
                     $palk = floatval($rida[2]);
-
                     if ($sugu === 'm') {
                         $meeste_palk += $palk;
                         $meeste_arv++;
@@ -90,21 +74,14 @@
                         }
                     }
                 }
-
                 fclose($fail);
-
                 $meeste_keskmine = ($meeste_arv > 0) ? ($meeste_palk / $meeste_arv) : 0;
                 $naiste_keskmine = ($naiste_arv > 0) ? ($naiste_palk / $naiste_arv) : 0;
-
                 echo "Meeste keskmine palk on " . number_format($meeste_keskmine, 2) . " ja kõige suurem palk on " . number_format($meeste_max, 2) . ".<br>";
                 echo "Naiste keskmine palk on " . number_format($naiste_keskmine, 2) . " ja kõige suurem palk on " . number_format($naiste_max, 2) . ".";
-
                 ?>
-
-
             </div>
         </div>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

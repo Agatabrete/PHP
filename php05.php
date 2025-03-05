@@ -35,7 +35,6 @@ väljasta eraldi üks suvaline nimi (suvaline arv genereeritakse vastavalt massi
                     echo "$nimi <br>";
                 }   
             }
-            
             echo "<h2>Viimane nimi:</h2>";
             echo end($nimed);
             echo "<h2>Suvaline nimi:</h2>";
@@ -111,8 +110,6 @@ väljasta eraldi üks suvaline nimi (suvaline arv genereeritakse vastavalt massi
                         foreach($firmad as $firma){
                 echo "$firma<br>";
             }
-            
-
             echo "<h1>Riigid:</h1>";
             echo "<h2>Pikima riigiga nimi:</h2>";
             $riigid = array ("Indonesia","Canada","Kyrgyzstan","Germany","Philippines",
@@ -142,8 +139,6 @@ väljasta eraldi üks suvaline nimi (suvaline arv genereeritakse vastavalt massi
             }
             ?>
             </div>
-
     </div>
-    
 </body>
 </html>

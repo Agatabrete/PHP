@@ -30,22 +30,17 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
     <title>Harjutused</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-
 </head>
 <body>
     <div class="container">
         <h1>Ülesanne 7</h1>
         <?php
         echo "<h2>Tervitus</h2>";
-
         function tervita(){
             return "Tere päiksekesenene";	
         }
         echo tervita();
-
         echo "<h2>Liitu uudiskirjaga</h2>";
-
         function uudiskiri(){
             return '<form action="" method="post">
             <div class="mb-3">
@@ -57,10 +52,8 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
         }
         echo uudiskiri();
         echo "<br>";
-
         ?>
         <h2>Kasutajanimi ja email</h2>
-
         <form action="" method="get">
             <div class="mb-3">
                 <label class="form-label">Sisesta kasutajanimi</label>
@@ -68,25 +61,19 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
             </div>
             <button type="submit" class="btn btn-primary">Saada</button>
         </form>  
-
-        <?php
-                            
+        <?php                  
         function kasutaja($kasutajanimi){
         $kasutajanimi = strtolower($kasutajanimi);
         $email = "$kasutajanimi@hkhk.edu.ee";
         $kood = substr(str_shuffle('abcdefghijklmnopqrstuvwxyz1234567890'), 0, 7);
         return "Kasutajanimi: $kasutajanimi <br> Email: $email <br> Kood: $kood";
         }
-        
         if(isset($_GET['kasutaja'])){
         echo kasutaja($_GET['kasutaja']);
         }
-        
         echo '<br>';
         ?>
-
         <h2>Arvud</h2>
-
         <form action="" method="get">
                     <div class="mb-3">
                         <label class="form-label">Sisesta esimene arv</label>
@@ -103,26 +90,21 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form>
-        
         <?php 
         function arvud($arv1, $arv2, $samm) {
         for ($arv = $arv1; $arv <= $arv2; $arv += $samm) {
                 echo "$arv";
                 echo ", ";
             }
-        }
-                            
+        }               
         if (isset($_GET['arv1'], $_GET['arv2'], $_GET['samm'])) {
             $arv1 = $_GET['arv1'];
             $arv2 = $_GET['arv2'];
-            $samm = $_GET['samm'];
-                            
+            $samm = $_GET['samm'];               
             arvud($arv1, $arv2, $samm);
-        
         }
         echo '<br>';
         ?>
-
         <h2>Ristküliku pindala</h2>
         <form action="" method="get">
                     <div class="mb-3">
@@ -135,7 +117,6 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form>
-
         <?php
         function pindala($a, $b){
             $pindala = 2*($a+$b);
@@ -147,9 +128,7 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
             echo "Ristküliku pindala: ".pindala($a, $b);
         }
         echo '<br>';
-
         ?>
-
         <h2>Isikukood</h2>
         <form action="" method="get">
                     <div class="mb-3">
@@ -158,7 +137,6 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form>
-
         <?php
         function isikukood($isikukood){
         $isikukood = strval($isikukood);
@@ -179,9 +157,7 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
             echo isikukood($_GET['isikukood']);
         }
         echo '<br>';
-
         echo "<h2>Head mõtted</h2>";
-
         function motted(){
             $alus = array("Täna", "eile", "Üleeile", "homme", "Ülehomme");
             $oeldis = array("on", "ei taha", "tahan", "ei saa olla", "saab olla");
@@ -193,19 +169,8 @@ koosta kood, mis lehele laadimisel valib suvaliselt igast massiivist elemendi ja
             }
         echo motted()
         ?>
-
-
-
-
-
-
     </div>
     
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

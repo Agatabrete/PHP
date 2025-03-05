@@ -20,43 +20,31 @@ Näiteks: sisend–>Ülle ja Doos; väljund–>ylle.doos@hkhk.edu.ee -->
         <h1>Harjutus 9</h1>
         <div class="row">
             <div class="col-md-4">
-
             <h2>Kasutaja tervitus</h2>
-
                 <form action="" method="get">
                     <div class="mb-3">
-                        <label class="form-label">Sisesta oma nimi!</label>
+                        <label class="form-label">Sisesta oma nimi:</label>
                         <input type="text" class="form-control" name="kasutaja">
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form>  
-
-
                 <?php
-
                 if (isset($_GET["kasutaja"])) {
                     $kasutaja = $_GET["kasutaja"];
                     $kasutaja = ucfirst(strtolower($kasutaja));
                     echo "Tere, $kasutaja!";
                 }
-
                 ?>
-
-
                 <br>
-
                 <h2>Teksti tükeldamine</h2>
-
                 <form action="" method="get">
                     <div class="mb-3">
-                        <label class="form-label">Sisesta oma nimi!</label>
+                        <label class="form-label">Sisesta oma nimi:</label>
                         <input type="text" class="form-control" name="sisend">
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form>  
-
                 <?php
-
                 if (isset($_GET["sisend"])) {
                     $sisend = $_GET["sisend"];
                     $sisend = strtoupper($sisend);
@@ -64,47 +52,34 @@ Näiteks: sisend–>Ülle ja Doos; väljund–>ylle.doos@hkhk.edu.ee -->
                     $sisend = implode(".", $sisend);
                     echo $sisend;
                 }
-
                 ?>
-
                 <br>
-
                 <h2>Ropud sõnad</h2>
-
                 <form action="" method="get">
                     <div class="mb-3">
-                        <label class="form-label">Sisesta oma nimi!</label>
+                        <label class="form-label">Sisesta oma nimi:</label>
                         <input type="text" class="form-control" name="parandus">
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form> 
-
                 <?php
-                
-                echo "noob, loll ja jobu";
-
+                echo "totu, ajuta ja jube";
                 if (isset($_GET["parandus"])) {
                     $parandus = $_GET["parandus"];
-                    $parandus = str_replace(array("noob", "loll", "jobu"), "***", $parandus);
+                    $parandus = str_replace(array("totu", "ajuta", "jube"), "***", $parandus);
                     echo $parandus;
                 }
-
                 ?>
-
                 <br>
-
                 <h2>Täpitähed ja email</h2>
-
                 <form action="" method="get">
                     <div class="mb-3">
-                        <label class="form-label">Sisesta oma nimi!</label>
+                        <label class="form-label">Sisesta oma nimi:</label>
                         <input type="text" class="form-control" name="nimi">
                     </div>
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form>
-
                 <?php
-
                 if (isset($_GET["nimi"])) {
                     $nimi = $_GET["nimi"];
                     $nimi = strtolower($nimi);
@@ -112,14 +87,9 @@ Näiteks: sisend–>Ülle ja Doos; väljund–>ylle.doos@hkhk.edu.ee -->
                     $email = "$nimi@hkhk.edu.ee";
                     echo $email;
                 }
-
                 ?>
-
-
-
             </div>
         </div>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
