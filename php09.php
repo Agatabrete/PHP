@@ -63,7 +63,7 @@ Näiteks: sisend–>Ülle ja Doos; väljund–>ylle.doos@hkhk.edu.ee -->
                     <button type="submit" class="btn btn-primary">Saada</button>
                 </form> 
                 <?php
-                echo "totu, ajuta ja jube";
+                echo "totu, ajuta ja jube ";
                 if (isset($_GET["parandus"])) {
                     $parandus = $_GET["parandus"];
                     $parandus = str_replace(array("totu", "ajuta", "jube"), "***", $parandus);
