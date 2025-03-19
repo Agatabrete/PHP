@@ -56,16 +56,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Avaleht</a>
+                        <a class="nav-link active text-light" aria-current="page" href="phpKT.php">Avaleht</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Minust</a>
+                        <a class="nav-link text-light" href="minust.php">Minust</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Kontakt</a>
+                        <a class="nav-link text-light" href="kontakt.php">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Admin</a>
+                        <a class="nav-link text-light" href="admin.php">Admin</a>
                     </li>
                 </ul>
             </div>

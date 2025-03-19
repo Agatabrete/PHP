@@ -14,7 +14,7 @@
             <div class="col-md-4">
                 <h2>Pildi üleslaadimine</h2>
                 <?php
-                chmod ("img", 0644);
+                chmod ("img", 7777);
                 if(!empty($_FILES['minu_fail']['name'])){
                     $sinu_faili_nimi = $_FILES['minu_fail']['name'];
                     $ajutine_fail = $_FILES['minu_fail']['tmp_name'];

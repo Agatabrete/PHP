@@ -10,6 +10,7 @@
 <body>
 
 <?php
+chmod ("img", 0644);
 $kataloog = 'img';
 $pildid = [];
 if (is_dir($kataloog)) {
